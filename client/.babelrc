@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@shared": "./src/shared",
+          "@components": "./src/shared/components",
+          "@hooks": "./src/shared/hooks",
+          "underscore": "lodash"
+        }
+      }
+    ]
+  ]
+}
