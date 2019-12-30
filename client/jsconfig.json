@@ -3,9 +3,15 @@
     "baseUrl": ".",
     "paths": {
       "*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@pages/*": ["src/pages/*"],
       "@shared/*": ["src/shared/*"],
       "@components/*": ["src/shared/components/*"],
       "@hooks/*": ["src/shared/hooks/*"],
+      "@constants/*": ["src/shared/constants/*"],
+      "@contexts/*": ["src/shared/contexts/*"],
+      "@layouts/*": ["src/shared/layouts/*"],
+      "@services/*": ["src/shared/services/*"],
       "underscore": ["lodash"]
     }
   }

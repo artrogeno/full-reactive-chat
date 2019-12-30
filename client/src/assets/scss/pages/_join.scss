@@ -1,0 +1,132 @@
+.full-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: flex-start;
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    // background-color: rgba($gray, 0.2);
+
+    .header-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 200px;
+      width: 400px;
+
+      .icon {
+        display: block;
+        width: 5rem;
+        svg {
+          path {
+            fill: $green-100;
+          }
+        }
+      }
+
+      .title {
+        color: $green-100;
+        display: block;
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 200;
+        padding-left: 2rem;
+        letter-spacing: 1rem;
+      }
+    }
+
+    .form-auth {
+      width: 400px;
+
+      input {
+        width: 100%;
+        margin-bottom: 0.4rem;
+        padding: 1.2rem;
+        font-size: 1.1rem;
+        color: $green-100;
+        border-radius: 4rem;
+        border: 0.04rem solid rgba($light, 0.4);
+        background-color: transparent;
+      }
+
+      .btn-auth {
+        margin-top: 3rem;
+        color: $white !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: $green-500;
+        padding: 1.6rem;
+        border-radius: 4rem;
+        display: inline-block;
+        border: none;
+        width: 100%;
+        &:disabled {
+          opacity: 0.6;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+}
+
+.join-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: $dark;
+
+  .join-wrap {
+    width: 20%;
+  }
+
+  .heading {
+    color: $white;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $white;
+  }
+
+  input {
+    border-radius: 4px;
+    padding: 15px 20px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .full-container {
+    height: 100%;
+    .header-logo,
+    .form-auth {
+      width: 90% !important;
+      padding: 0 1rem;
+    }
+    .header-logo {
+      .icon {
+        width: 6rem;
+      }
+      .title {
+        font-size: 3rem !important;
+        padding-left: 1rem !important;
+      }
+    }
+  }
+
+  .join-container {
+    height: 100%;
+    .join-wrap {
+      width: 90%;
+    }
+  }
+}

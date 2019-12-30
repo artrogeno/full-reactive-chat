@@ -1,4 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(<h1>Test</h1>, document.querySelector("#app"));
+import App from './App'
+import '@services/fontawesome'
+import '@assets/scss/app.scss'
+
+ReactDOM.render(<App />, document.querySelector('#app'))

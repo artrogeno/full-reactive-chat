@@ -1,0 +1,39 @@
+.navleft {
+  position: fixed;
+  height: 100vh;
+  width: $navleft-width;
+  background-color: $gray-800;
+  left: 0;
+  top: 0;
+  @include trasition(all, 0.3s, ease-in-out);
+
+  &.active {
+    width: $navleft-width-active;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+
+    // &.bottom-nav {
+    //   margin-top: 100%;
+    // }
+
+    button,
+    a {
+      outline: none;
+      margin-bottom: 1rem;
+      .icon {
+        color: rgba($white, 0.6);
+        font-size: 2rem;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+$color-body: #fff !default;
+
+$dark: #24190c !default;
+$light: #f3f3f3 !default;
+
+$white: #fff !default;
+$black: #000 !default;
+$gray: #798f96 !default;
+$blue: #577590 !default;
+$green: #28a745 !default;
+$yellow: #ffc107 !default;
+$orange: #fd7e14 !default;
+$pink: #d88db0 !default;
+$red: #bb1934 !default;
+$brown: #774448 !default;
+$purple: #9178c0 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$gray-100: #cacaca !default;
+$gray-200: #b4b4b4 !default;
+$gray-300: #a0a0a0 !default;
+$gray-400: #8b8b8b !default;
+$gray-500: #727272 !default;
+$gray-600: #616161 !default;
+$gray-700: #464646 !default;
+$gray-800: #272727 !default;
+$gray-900: #0e0e0e !default;
+
+$green-100: #a6bd9b !default;
+$green-200: #8fa685 !default;
+$green-300: #789479 !default;
+$green-400: #778a3c !default;
+$green-500: #637433 !default;
+$green-900: #36411a !default;
+
+$blue-200: #5cb9c7 !default;
+$blue-400: #6598c5 !default;
+$blue-500: #72a9d9 !default;
+$blue-900: #1a3059 !default;
+
+$brown-200: #b0a6a7 !default;
+$brown-300: #6c594c !default;
+$brown-400: #783f27 !default;
+$brown-500: #833a2e !default;
+
+// NAV-LEFT
+$navleft-width: 80px !default;
+$navleft-width-active: 160px !default;
+
+// HEADER
+$header-width: calc(100vw - #{$navleft-width}) !default;
+$header-width-active: calc(100vw - #{$navleft-width-active}) !default;
+$header-height: 80px;

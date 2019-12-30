@@ -1,0 +1,51 @@
+.header-top {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  top: 0;
+  left: $navleft-width;
+  width: $header-width;
+  height: $header-height;
+  background-color: $green-900;
+  box-shadow: 0 0.125rem 0.25rem rgba($white, 0.075);
+  z-index: 11;
+  @include trasition(all, 0.3s, ease-in-out);
+
+  &.active {
+    left: $navleft-width-active;
+    width: $header-width-active;
+  }
+
+  .wrap {
+    &-room,
+    &-title,
+    &-user {
+      flex: 1 1 auto !important;
+    }
+
+    &-room {
+      text-align: left;
+      .icon {
+        &.on {
+          color: $green;
+        }
+        padding: 0 2rem;
+      }
+    }
+
+    &-title {
+      text-align: center;
+    }
+
+    &-user {
+      text-align: right;
+      padding-right: 2rem;
+      button {
+        outline: none;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
