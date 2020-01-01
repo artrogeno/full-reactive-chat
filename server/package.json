@@ -4,7 +4,6 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "postinstall": "link-module-alias",
     "start": "nodemon src/server.js",
     "build": "sucrase ./src -d ./dist --transforms imports",
     "lint": "eslint ."
@@ -28,7 +27,6 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "link-module-alias": "^1.2.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "sucrase": "^3.11.0"
