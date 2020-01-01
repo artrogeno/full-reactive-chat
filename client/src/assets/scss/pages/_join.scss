@@ -54,6 +54,10 @@
         border-radius: 4rem;
         border: 0.04rem solid rgba($light, 0.4);
         background-color: transparent;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
       }
 
       .btn-auth {

@@ -40,19 +40,14 @@ const Join = ({ history }) => {
             value={room}
             onChange={e => setRoom(e.target.value)}
           />
-          <Link
-            onClick={e => (!name || !room ? e.preventDefault() : null)}
-            to={`/chat?name=${name}&room=${room}`}
+          <button
+            onClick={goTo}
+            className="btn-auth"
+            type="button"
+            disabled={!name || !room || (!name && !room)}
           >
-            <button
-              onClick={goTo}
-              className="btn-auth"
-              type="submit"
-              disabled={!name || !room || (!name && !room)}
-            >
-              Sign In
-            </button>
-          </Link>
+            Sign In
+          </button>
         </div>
       </div>
     </div>

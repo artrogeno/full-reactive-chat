@@ -2,7 +2,6 @@ import React from 'react'
 import ScrollToBottom from 'react-scroll-to-bottom'
 
 import Message from '@components/Message'
-import './Messages.scss'
 
 const Messages = ({ messages, name }) => {
   return (

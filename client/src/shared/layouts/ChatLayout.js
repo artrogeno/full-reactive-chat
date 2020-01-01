@@ -9,14 +9,14 @@ const ChatLayout = ({ children }) => {
   const [chatConfig, setChatConfig] = useState({
     title: '',
     online: true,
-    menu: false,
+    menu: true,
     users: [],
     room: '',
   })
 
-  useEffect(() => {
-    console.log(chatConfig)
-  }, [chatConfig])
+  // useEffect(() => {
+  //   console.log(chatConfig)
+  // }, [chatConfig])
 
   return (
     <ChatProvider value={[chatConfig, setChatConfig]}>

@@ -44,9 +44,12 @@ $brown-300: #6c594c !default;
 $brown-400: #783f27 !default;
 $brown-500: #833a2e !default;
 
+// SCROLL
+$bg-scrollbar: #333438;
+
 // NAV-LEFT
 $navleft-width: 80px !default;
-$navleft-width-active: 160px !default;
+$navleft-width-active: 380px !default;
 
 // HEADER
 $header-width: calc(100vw - #{$navleft-width}) !default;

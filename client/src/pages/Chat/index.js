@@ -6,7 +6,6 @@ import { getItem, clear } from '@services/storage'
 import chatContext from '@contexts/chatContext'
 import Messages from '@components/Messages'
 import Input from '@components/Input'
-// import TextContainer from '@components/TextContainer'
 import { ENV } from '@constants/app'
 
 const Chat = ({ history }) => {
@@ -49,25 +48,39 @@ const Chat = ({ history }) => {
   }, [room, chatConfig])
 
   useEffect(() => {
-    socketRef.current.on('message', message => {
+    socketRef.current.on('message', (message, error) => {
+      if (error) {
+        console.log('-------- message error: ', error)
+      }
       setMessages([...messages, message])
     })
 
-    socketRef.current.on('roomData', ({ users }) => {
+    socketRef.current.on('roomData', ({ users }, error) => {
+      if (error) {
+        console.log('-------- roomData error: ', error)
+      }
+      setChatConfig({ ...chatConfig, users })
       setUsers(users)
     })
 
     return () => {
-      socketRef.current.emit('disconnect')
-      socketRef.current.off()
+      if (name === '' && room === '') {
+        socketRef.current.emit('disconnect')
+        socketRef.current.off()
+      }
     }
-  }, [messages])
+  }, [messages, chatConfig])
 
   const sendMessage = e => {
     e.preventDefault()
 
     if (message) {
-      socketRef.current.emit('sendMessage', message, () => setMessage(''))
+      socketRef.current.emit('sendMessage', message, error => {
+        if (error) {
+          console.log('--------error: ', error)
+        }
+        setMessage('')
+      })
     }
   }
 
@@ -81,7 +94,6 @@ const Chat = ({ history }) => {
           sendMessage={sendMessage}
         />
       </div>
-      {/* <TextContainer users={users} /> */}
     </div>
   )
 }
